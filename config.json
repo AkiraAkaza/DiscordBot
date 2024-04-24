@@ -1,0 +1,124 @@
+{
+  "discord": {
+    "token": "your bot token",
+    "prefix": "*",
+    "owner": "YOUR_ID",
+    "activity": "!help",
+    "activityType": "PLAYING",
+    "status": "online",
+    "statusType": "PLAYING",
+    "livechat": "1232343431972388976",
+    "message": "Hello, I am a bot that will help you with your server!",
+    "reaction": "👍",
+    "embedColor": "#00ff00",
+    "embedColorError": "#ff0000",
+    "embedColorSuccess": "#00ff00",
+    "embedColorWarning": "#ffff00",
+    "embedColorInfo": "#0000ff",
+    "embedFooter": "Your bot name"
+  },
+  
+  "bot-admin": {
+    "prefix": "*",
+    "admin": [
+      "0_Ngocc",
+      "truc8783"
+    ]
+  },
+  
+  "bot-account": {
+    "username": "LanAnh_Bot",
+    "password": "your_password",
+    "type": "offline"
+  },
+
+  "server": {
+    "ip": "8b8t.me",
+    "port": 25565,
+    "version": "1.16.5"
+  },
+
+  "facts": [
+    "Server 8b8t đã xoá giáp 32k trên netherit nhưng giáp kim cương 32k vẫn dùng được",
+    "Hiện tại 8b8t vẫn có thể dùng frame để dupe vậy nên hãy nhanh tay lên mấy bạn",
+    "bạn nên cẩn thận với các món đồ backdoor hiện có vì nó có thể bị leee xoá bất cứ lúc nào kể cả trong ender_chest",
+    "bạn có thể bật jesus với mode solid và cưỡi trên một con vật bất kì với enity speed với mode speed 50 đi trên nước không bị kick flight",
+    "giới hạn elytra fly trên meteor với mode vanilla-Horizontol speed là 10 nhưng khi bay server cũng không kick bạn ra ngoài",
+    "Đang cập nhật thêm facts mong cậu lượng thứ!"
+  ],
+
+  "utils": {
+    "auto-auth": {
+      "enabled": false,
+      "password": "12345678"
+    },
+
+    "anti-afk": {
+      "enabled": false,
+      "sneak": false,
+      "jump": false,
+      "rotate": false,
+
+      "hit": {
+        "enabled": false,
+        "delay": 1000,
+        "attack-mobs": false
+      }
+    },
+
+    "bot_whisper": {
+      "enabled": false,
+      "fancy-chat": false,
+      "repeat-delay": 5,
+      "blacklist": [
+        "0_Ngocc",
+        "truc8783",
+        "0_Lanny",
+        "0_Chiharu",
+        "0_TongNgoc",
+        "0_HoangLan",
+        "SunWind",
+        "SunWindOnTop",
+        "YoungMayChem",
+        "Leee",
+        "InvalidBot",
+        "khang233"
+      ],
+      "colorCodes": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f", "r"],
+      "colorFonts": ["l", "k", "n", "m", "o"],
+
+      "whisper_messages": [
+        "Sử dụng \"*help\" để xem toàn bộ lệnh của bot",
+        "Sử dụng \"*dupe <tên kit>\" để dupe kit",
+        "Bạn có thể dùng \"*help + <tên lệnh>\" để xem cách sử dụng lệnh"
+      ]
+    },
+    
+    "chat-messages": {
+      "enabled": true,
+      "repeat": true,
+      "repeat-delay": 60,
+
+      "messages": [
+        "dùng *help để xem toàn bộ lệnh của bot",
+        "bạn biết gì chưa bot có thể dupe kit cho bạn đó hãy dùng *dupe + kit_name",
+        "bot vẫn có các lệnh đơn giản như *ping và *tps",
+        "bạn có thể đổi skin cho bot với lệnh *skin + skin_name",
+        "để biết ngày tháng hiện tại bạn có thể dùng lệnh *time",
+        "bạn có thể dùng lệnh *help + <tên_lệnh> để xem cách sử dụng",
+        "bot này do 0_Ngocc tạo nên sẽ dành cho người Việt Nam sử dụng nha nếu bạn muốn update thêm tính năng hãy liên hệ discord: chyhiroo_",
+        "bot hiện tại chỉ dừng lại ở vài lệnh cơ bản nếu bạn muốn update thêm hãy liên hệ với mình qua discord: chyhiroo_",
+        "frame dupe vẫn còn đang hoạt động tốt ở server này",
+        "[ Quảng Cáo ]: Tớ có một kênh youtube mới lập mong mọi người ủng hộ https://www.youtube.com/@akiraakaza.",
+        "tớ cũng có làm bot frame_dupe đó nếu mọi người quan tâm thì liên hệ mình nha",
+        "trước đó cũng có làm một con bot hỗ trợ donkey dupe mà chưa kịp dùng đã bị pach :(",
+        "> Hoang Sa and Truong Sa belong to Viet Nam",
+        "có thể bạn chưa biết 0_Ngocc đã viết nên bot này!"
+      ]
+    },
+
+    "chat-log": false,
+    "auto-reconnect": true,
+    "auto-reconnect-delay": 5000
+  }
+}
