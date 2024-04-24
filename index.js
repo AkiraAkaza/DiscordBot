@@ -137,7 +137,7 @@ function createBot() {
         console.error('client.channels.cache is undefined.');
       }
     });
-/*
+
     client.once('ready', () => {
       console.log(`Discord bot logged in as ${client.user.tag}`);
       const channel = client.channels.cache.get(livechat);
@@ -148,7 +148,7 @@ function createBot() {
         channel.send(`Discord bot logged in as ${client.user.tag}`);
       }
     });
-*/
+
     client.login(process.env.token);
   // client.login(config.discord.token);
 }
