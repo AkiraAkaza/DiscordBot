@@ -1,17 +1,14 @@
-const pass = process.env.password;
 const fs = require('fs');
 const config = require('./config.json');
 
 async function loginBot(bot) {
-  // const pass = config.utils['auto-auth'].password;
+ const pass = config.utils['auto-auth'].password;
   bot.on("messagestr", (message) => {
     if (message.includes("Use the command /register <password> <password>.")) {
       bot.chat(`/register ${pass} ${pass}`);
     }
     if (message.includes("Use the command /login <password>.")) {
         bot.chat(`/login ${pass}`);
-    }
-    if  (message.includes(`Your login session has been continued.`)) {
       
       if (config.utils['chat-messages'].enabled) {
          console.log('Started chat-messages module');
@@ -73,8 +70,8 @@ async function loginBot(bot) {
       return dms.blacklist.includes(player.toLowerCase());
        }    
     }
+   }
 
-    }
     if  (message.includes(`You have successfully logged.`)) {
       bot.chat(`/8b8t`);
     }
