@@ -7,8 +7,10 @@ async function loginBot(bot) {
     if (message.includes("Use the command /register <password> <password>.")) {
       bot.chat(`/register ${pass} ${pass}`);
     }
-    if (message.includes("Use the command /login <password>.")) {
+    if (message.includes("Hãy nhập lệnh : /login { mật khẩu của bạn} để vào server")) {
         bot.chat(`/login ${pass}`);
+    setTimeout(() => { bot.activateItem(); }, 5 * 1000);
+    setTimeout(() => { bot.clickWindow(15, 0, 0); }, 5 * 1000);
       
       if (config.utils['chat-messages'].enabled) {
          console.log('Started chat-messages module');
