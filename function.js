@@ -17,7 +17,7 @@ async function loginBot(bot) {
       }
 
    bot.on("windowOpen", function(window) {
-    setTimeout(() => { 
+    setTimeout(() => {
        bot.clickWindow(13, 0, 0);
      }, 5 * 1000);
   })
@@ -82,7 +82,7 @@ async function loginBot(bot) {
       return dms.blacklist.includes(player.toLowerCase());
        }    
     }
-   }
+   
 
     if  (message.includes(`You have successfully logged.`)) {
       bot.chat(`/8b8t`);
