@@ -9,9 +9,19 @@ async function loginBot(bot) {
     }
     if (message.includes("Hãy nhập lệnh : /login { mật khẩu của bạn} để vào server")) {
         bot.chat(`/login ${pass}`);
-    setTimeout(() => { bot.activateItem(); }, 5 * 1000);
-    setTimeout(() => { bot.clickWindow(15, 0, 0); }, 5 * 1000);
-      
+
+        setTimeout(() => {
+            bot.setQuickBarSlot(0);
+            bot.activateItem(false);
+        }, 4000);
+      }
+
+   bot.on("windowOpen", function(window) {
+    setTimeout(() => { 
+       bot.clickWindow(13, 0, 0);
+     }, 5 * 1000);
+  })
+     
       if (config.utils['chat-messages'].enabled) {
          console.log('Started chat-messages module');
 
