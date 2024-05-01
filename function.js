@@ -82,14 +82,7 @@ bot.once("spawn", () => {
       return dms.blacklist.includes(player.toLowerCase());
        }    
       }
-
-    if  (message.includes(`You have successfully logged.`)) {
-      bot.chat(`/8b8t`);
-    }
-    if  (message.includes(`[8b8t] Unknown command do /help`)) {
-      bot.chat(`/8b8t`);
-    }
-});
+   });
 }
 
 async function randomSrc() {
