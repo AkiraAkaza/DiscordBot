@@ -2,24 +2,25 @@ const fs = require('fs');
 const config = require('./config.json');
 
 async function loginBot(bot) {
- const pass = config.utils['auto-auth'].password;
- 
-  bot.on('messagestr', async (msg) => {
-    if (msg.trim() == '') return;
-    if (msg.trim() == 'Hãy nhập lệnh : /login < mật khẩu của bạn> để vào server') {
-        bot.chat(`/login ${password}`)
-        setTimeout(() => {
-            bot.setQuickBarSlot(0);
-            bot.activateItem(false);
-        }, 5000);
-      }
-  });
+ const password = config.utils['auto-auth'].password;
 
-   bot.on("windowOpen", function(window) {
-    setTimeout(() => {
-       bot.clickWindow(13, 0, 0);
-     }, 5 * 1000);
-  })
+bot.once("spawn", () => {
+  bot.on("messagestr", (message) => {
+    if (message.includes("/register")) {
+      bot.chat(`/register ${password} ${password}`);
+    } else if (message.includes("/login")) {
+      setTimeout(() => {
+        bot.chat(`/login ${password}`);
+        setTimeout(() => {
+          bot.setQuickBarSlot(0);
+          bot.activateItem(false);
+          bot.on("windowOpen", function (window) {
+            bot.clickWindow(13, 0, 0);
+          });
+        }, 1000);
+      }, 1000);
+    }
+  });
      
       if (config.utils['chat-messages'].enabled) {
          console.log('Started chat-messages module');
@@ -80,8 +81,7 @@ async function loginBot(bot) {
     function isBlacklisted(player) {
       return dms.blacklist.includes(player.toLowerCase());
        }    
-    }
-   
+      }
 
     if  (message.includes(`You have successfully logged.`)) {
       bot.chat(`/8b8t`);
@@ -89,7 +89,7 @@ async function loginBot(bot) {
     if  (message.includes(`[8b8t] Unknown command do /help`)) {
       bot.chat(`/8b8t`);
     }
-  });
+});
 }
 
 async function randomSrc() {
