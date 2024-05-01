@@ -3,18 +3,17 @@ const config = require('./config.json');
 
 async function loginBot(bot) {
  const pass = config.utils['auto-auth'].password;
-  bot.on("messagestr", (message) => {
-    if (message.includes("Use the command /register <password> <password>.")) {
-      bot.chat(`/register ${pass} ${pass}`);
-    }
-    if (message.includes("Hãy nhập lệnh : /login { mật khẩu của bạn} để vào server")) {
-        bot.chat(`/login ${pass}`);
-
+ 
+  bot.on('messagestr', async (msg) => {
+    if (msg.trim() == '') return;
+    if (msg.trim() == 'Hãy nhập lệnh : /login < mật khẩu của bạn> để vào server') {
+        bot.chat(`/login ${password}`)
         setTimeout(() => {
             bot.setQuickBarSlot(0);
             bot.activateItem(false);
-        }, 4000);
+        }, 5000);
       }
+  });
 
    bot.on("windowOpen", function(window) {
     setTimeout(() => {
