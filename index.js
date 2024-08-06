@@ -149,8 +149,7 @@ function createBot() {
       }
     });
 
-    client.login(process.env.token);
-  // client.login(config.discord.token);
+  client.login(config.discord.token);
 }
 
 
