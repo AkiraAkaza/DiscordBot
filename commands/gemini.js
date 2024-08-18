@@ -16,14 +16,14 @@ module.exports = {
      */
     async run(bot, user, msg, args) {
         if (!args[0]) return bot.chat(`Bạn cần đưa ra câu hỏi`);
+        const message = args.join(' ');
         
-      const ai = new GoogleGenerativeAI(API_KEY);
-      const model = ai.getGenerativeModel({
-        model: MODEL,
-      })
+        const ai = new GoogleGenerativeAI(API_KEY);
+        const model = ai.getGenerativeModel({
+            model: MODEL,
+          })
 
-      const { response } = await model.generateContent(message.cleanContent);
-
-      await bot.chat(response.text())
+        const { response } = await model.generateContent(message.cleanContent);
+        await bot.chat(`@${user.toLowerCase()} ` + response.text())
     }
 }
