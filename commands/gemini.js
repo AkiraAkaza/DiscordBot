@@ -15,6 +15,8 @@ module.exports = {
      * @param {String[]} args 
      */
     async run(bot, user, msg, args) {
+        if (!args[0]) return bot.chat(`Bạn cần đưa ra câu hỏi`);
+        
       const ai = new GoogleGenerativeAI(API_KEY);
       const model = ai.getGenerativeModel({
         model: MODEL,
